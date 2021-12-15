@@ -1,0 +1,55 @@
+MatchDTO:
+- MatchInfoDto
+- PlayerDto (x 10 for every player)
+- teamDto (x 2 for every team)
+- RoundResultDto
+
+
+	MatchInfoDto:
+	- mapId
+	- gameLengthMillis
+	- gameStartMillis
+	- isCompleted
+
+	PlayerDto (x 10)
+	- gameName
+	- tagLine
+	- teamId
+	- characterId
+	- stats (x 10 for every player)
+
+		PlayerStatsDto (x 1)
+		- score
+		- rounds played
+
+		PlayerStatsDto (x 10)
+		- kills
+		- deaths
+		- assists
+		- abilityCasts (x 10)
+
+			AbilityCastsDto (x 10)
+			- grenadeCasts
+			- ability1Casts
+			- ability2Casts
+
+	teamDto (x 2)
+	- teamId
+	- numPoints
+
+	RoundResultsDto
+	- roundNum
+	- roundResult
+	- roundCeremony
+	- winningTeam
+	- plantRoundTime
+	- defuseRoundTime
+
+	PlayerRoundStatsDto (x 10):
+	- economy (x 10)
+
+		EconomyDto (x 10):
+		- weapon
+		- armor
+		- remaining
+
